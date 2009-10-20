@@ -27,14 +27,23 @@ import com.sun.javadoc.Tag;
 
 public class MissingGithashTagletTest implements IClassDocTester {
 
+    /**
+     * @inheritDoc
+     */
     public String getDescription() {
         return "Tests if the @cdk.githash tag is given.";
     }
 
+    /**
+     * @inheritDoc
+     */
     public String getName() {
         return "CDK Githash Taglet Test";
     }
 
+    /**
+     * @inheritDoc
+     */
     public List<ITestReport> test(ClassDoc classDoc) {
         List<ITestReport> reports = new ArrayList<ITestReport>();
         Tag[] tags = classDoc.tags("cdk.githash");
@@ -50,6 +59,9 @@ public class MissingGithashTagletTest implements IClassDocTester {
         return reports;
     }
 
+    /**
+     * @inheritDoc
+     */
     public Priority getPriority() {
         return Priority.MINOR_ERROR;
     }
