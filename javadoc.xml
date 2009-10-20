@@ -264,7 +264,7 @@
       </classpath>
     </javac>
     <javac srcdir="src/main" destdir="src/main"
-         includes="net/sf/cdk/tools/**/*.java" debug="on" optimize="off">
+         includes="net/sf/cdk/tools/**/*Taglet.java" debug="on" optimize="off">
       <classpath>
         <fileset dir="jar/">
           <include name="xom-1.1.jar" />
@@ -273,7 +273,7 @@
     </javac>
   </target>
 
-  <target name="compileDocTests" id="compileDoclets"
+  <target name="compileDocTests" id="compileDocTests"
        depends="check">
     <javac srcdir="src/main" destdir="src/main"
            includes="net/sf/cdk/tools/checkdoctest/*Test.java"
