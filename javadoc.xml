@@ -212,7 +212,7 @@
     </target>
 
     <target name="ojdcheck-module">
-        <mkdir dir="reports/ojdcheck/${module}/"/>
+        <mkdir dir="reports/ojdcheck/"/>
         <mkdir dir="${build}/src/${module}"/>
         <copy todir="${build}/src/${module}">
             <fileset dir="${src}/main">
@@ -226,7 +226,7 @@
                     path="develjar/ojdcheck.jar:src/main">
               <param name="-xhtml"/>
               <param name="-file"
-                    value="reports/ojdcheck/${module}/report.html"/>
+                    value="reports/ojdcheck/${module}.html"/>
               <param name="-tests"
                     value="net.sf.cdk.tools.checkdoctest.MissingGithashTagletTest"/>
             </doclet>
